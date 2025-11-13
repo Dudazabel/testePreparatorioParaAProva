@@ -1,0 +1,18 @@
+package org.example.service;
+
+import org.example.model.Equipamento;
+import org.example.repository.EquipamentoDAO;
+
+import java.sql.SQLException;
+
+public class EquipamentoService {
+
+    public static void criarEquipamento(Equipamento equipamento)throws SQLException {
+
+        var dao = new EquipamentoDAO();
+
+        try(dao.equipamentoExiste(equipamento)){
+
+        }
+    }
+}
