@@ -23,7 +23,7 @@ public class EquipamentoDAO {
         }
     }
 
-    public static boolean equipamentoExiste(Equipamento equipamento) throws SQLException{
+    public static boolean equipamentoExiste() throws SQLException{
         String query = "SELECT nome FROM Equipamento WHERE id = ?";
 
         try(Connection conn = ConexaoBanco.conectar();

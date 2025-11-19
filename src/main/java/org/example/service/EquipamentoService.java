@@ -11,7 +11,13 @@ public class EquipamentoService {
 
         var dao = new EquipamentoDAO();
 
-        try(dao.equipamentoExiste(equipamento)){
+        try{
+            if(dao.equipamentoExiste() == true){
+               throw new RuntimeException("Equipamento já existe.");
+            }else{
+                dao.criarEquipamento(equipamento);
+            }
+        }catch(SQLException erro){
 
         }
     }
